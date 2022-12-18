@@ -9,9 +9,55 @@ body {
 
 .sidebar {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.aboutImage {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
 }
 .profilePic {
     height: 120px;
+}
+.profilePicSource {
+    text-align: center;
+}
+.contactInfo {
+    flex: 1;
+    background-color: rgb(203, 203, 190);
+    border: solid rgb(203, 203, 190) 5px;
+}
+.skillsContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(232, 217, 184);
+    border: solid rgb(232, 217, 184) 5px;
+}
+.skillEven, .skillOdd {
+    border: solid grey 2px;
+}
+.skillOdd {
+    flex: 1;
+    background-color: bisque;
+    width: 90%;
+}
+.skillEven {
+    flex: 1;
+    background-color: rgb(246, 198, 140);
+    width: 90%;
+}
+.metaContainer {
+    width: 95%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(201, 221, 214);
+    border: solid rgb(201, 221, 214) 5px;
 }
 
 .mainText {
