@@ -12,6 +12,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 100%;
 }
 .aboutImage {
     display: flex;
@@ -26,20 +29,22 @@ body {
     text-align: center;
 }
 .contactInfo {
-    flex: 1;
+    flex: content;
     background-color: rgb(203, 203, 190);
     border: solid rgb(203, 203, 190) 5px;
 }
 .skillsContainer {
-    flex: 1;
+    flex: content;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: rgb(232, 217, 184);
     border: solid rgb(232, 217, 184) 5px;
 }
 .skillEven, .skillOdd {
     border: solid grey 2px;
+    justify-content: center;
 }
 .skillOdd {
     flex: 1;
@@ -52,16 +57,20 @@ body {
     width: 90%;
 }
 .metaContainer {
-    width: 95%;
     flex: 1;
     display: flex;
     flex-direction: column;
     background-color: rgb(201, 221, 214);
     border: solid rgb(201, 221, 214) 5px;
+    min-width: 300px;
 }
 
+
+/* maintext */
+
+
 .mainText {
-    flex: 3;
+    flex: auto;
     flex-direction: column;
 }
 .preamble {
@@ -69,9 +78,13 @@ body {
 }
 .educationContainer {
     flex: 1;
+    background-color: aquamarine;
+    border: solid aquamarine 5px;
 }
 .experienceContainer {
     flex: 1;
+    background-color: rgb(248, 190, 238);
+    border: solid rgb(248, 190, 238) 5px;
 }
 .publicationsContainer {
     flex: 1;
