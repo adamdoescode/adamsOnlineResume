@@ -14,7 +14,7 @@ html body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     min-width: 300px;
     max-width: 300px;
     /* min-height: 100%;
@@ -51,6 +51,7 @@ html body {
     width: 90%;
     border: solid rgb(165, 165, 165) 2px;
     background-color: rgb(212, 182, 182);
+    padding: 2px;
 }
 .skillsContainer {
     flex: content;
@@ -63,6 +64,7 @@ html body {
 }
 .skillEven, .skillOdd {
     border: solid grey 2px;
+    padding: 2px;
 }
 .skillOdd {
     flex: 1;
@@ -86,11 +88,12 @@ html body {
 .lastUpdate, .linkToWeb {
     flex: 1;
     width: 90%;
+    padding: 2px;
 }
-.sidebarSpacer {
-    flex: 1;
-
-}
+/* .sidebarSpacer {
+    align-items: stetch;
+    background-color: blue;
+} */
 
 /* maintext */
 
@@ -109,10 +112,22 @@ html body {
     background-color: aquamarine;
     border: solid aquamarine 5px;
 }
+.educationDiv {
+    flex: 1;
+    border: solid rgb(35, 195, 142) 2px;
+    margin: 1px;
+    padding: 5px;
+}
 .experienceContainer {
     flex: 1;
     background-color: rgb(248, 190, 238);
     border: solid rgb(248, 190, 238) 5px;
+}
+.experienceDiv {
+    flex: 1;
+    border: solid rgb(207, 106, 190) 2px;
+    margin: 1px;
+    padding: 5px;
 }
 .publicationsContainer {
     flex: 1;
@@ -125,4 +140,5 @@ html body {
     flex: 1;
     border: solid green 2px;
     margin: 1px;
+    padding: 5px;
 }
