@@ -1,10 +1,13 @@
-body {
+html body {
     background-color: beige;
+    height: 100%;
 }
 
 .contentHolder {
     display: flex;
     flex-direction: row-reverse;
+    align-items: flex-start;
+    min-height: 100%;
 }
 
 .sidebar {
@@ -14,7 +17,10 @@ body {
     align-items: center;
     min-width: 300px;
     max-width: 300px;
-    min-height: 100%;
+    /* min-height: 100%;
+    max-height: 100%; */
+    border: solid red 2px;
+    background-color: rgb(192, 143, 143);
 }
 .aboutImage {
     display: flex;
@@ -60,11 +66,19 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: rgb(201, 221, 214);
-    border: solid rgb(201, 221, 214) 5px;
     min-width: 300px;
+    max-width: 300px;
 }
+.lastUpdate, .linkToWeb {
+    flex: 1;
+    width: 90%;
+}
+.sidebarSpacer {
+    flex: 1;
 
+}
 
 /* maintext */
 
@@ -72,6 +86,8 @@ body {
 .mainText {
     flex: auto;
     flex-direction: column;
+    /* min-width: 900px;
+    max-width: 900px; */
 }
 .preamble {
     flex: 1;    
@@ -88,4 +104,7 @@ body {
 }
 .publicationsContainer {
     flex: 1;
+}
+.publication1, .publication2 {
+    border: solid white 2px;
 }
