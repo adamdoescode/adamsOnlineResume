@@ -16,4 +16,17 @@ body {
 
 .mainText {
     flex: 3;
+    flex-direction: column;
+}
+.preamble {
+    flex: 1;    
+}
+.educationContainer {
+    flex: 1;
+}
+.experienceContainer {
+    flex: 1;
+}
+.publicationsContainer {
+    flex: 1;
 }
