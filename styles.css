@@ -1,0 +1,19 @@
+body {
+    background-color: beige;
+}
+
+.contentHolder {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.sidebar {
+    flex: 1;
+}
+.profilePic {
+    height: 120px;
+}
+
+.mainText {
+    flex: 3;
+}
