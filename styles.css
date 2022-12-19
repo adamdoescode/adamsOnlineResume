@@ -1,6 +1,10 @@
 html body {
-    background-color: beige;
+    background-color: rgb(42, 42, 38);
+    color: aliceblue;
     height: 100%;
+}
+a {
+    color: aquamarine;
 }
 
 .contentHolder {
@@ -20,7 +24,7 @@ html body {
     /* min-height: 100%;
     max-height: 100%; */
     /* border: solid red 2px; */
-    background-color: rgb(192, 143, 143);
+    background-color: rgb(68, 50, 50);
 }
 .aboutImage {
     display: flex;
@@ -40,8 +44,8 @@ html body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgb(203, 203, 190);
-    border: solid rgb(203, 203, 190) 5px;
+    background-color: rgb(74, 74, 68);
+    padding 5px;
 }
 .contactInfo h3 {
     text-align: center;
@@ -49,8 +53,8 @@ html body {
 .linkAboutMe {
     flex: 1;
     width: 90%;
-    border: solid rgb(165, 165, 165) 2px;
-    background-color: rgb(212, 182, 182);
+    border: solid rgb(112, 79, 79) 2px;
+    background-color: rgb(65, 52, 52);
     padding: 2px;
 }
 .skillsContainer {
@@ -59,8 +63,8 @@ html body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgb(232, 217, 184);
-    border: solid rgb(232, 217, 184) 5px;
+    background-color: rgb(66, 62, 52);
+    padding: 5px;
 }
 .skillEven, .skillOdd {
     border: solid grey 2px;
@@ -68,12 +72,12 @@ html body {
 }
 .skillOdd {
     flex: 1;
-    background-color: bisque;
+    background-color: rgb(80, 71, 61);
     width: 90%;
 }
 .skillEven {
     flex: 1;
-    background-color: rgb(246, 198, 140);
+    background-color: rgb(81, 65, 46);
     width: 90%;
 }
 .metaContainer {
@@ -81,7 +85,7 @@ html body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(201, 221, 214);
+    background-color: rgb(53, 72, 65);
     min-width: 300px;
     max-width: 300px;
 }
@@ -109,8 +113,8 @@ html body {
 }
 .educationContainer {
     flex: 1;
-    background-color: aquamarine;
-    border: solid aquamarine 5px;
+    background-color: rgb(66, 77, 73);
+    padding: 5px;
 }
 .educationDiv {
     flex: 1;
@@ -120,8 +124,8 @@ html body {
 }
 .experienceContainer {
     flex: 1;
-    background-color: rgb(248, 190, 238);
-    border: solid rgb(248, 190, 238) 5px;
+    background-color: rgb(67, 51, 64);
+    padding: 5px;
 }
 .experienceDiv {
     flex: 1;
@@ -133,12 +137,15 @@ html body {
     flex: 1;
     align-items: left;
     flex-direction: column;
-    background-color: rgb(198, 220, 213);
-    border: solid rgb(198, 220, 213) 5px;
+    background-color: rgb(57, 62, 61);
+    padding: 5px;
 }
 .publication1, .publication2 {
     flex: 1;
     border: solid green 2px;
     margin: 1px;
     padding: 5px;
+}
+footer {
+    text-align: center;
 }
