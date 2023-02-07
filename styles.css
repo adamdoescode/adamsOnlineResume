@@ -26,12 +26,29 @@ h2 {
 .preamble {
     flex: 1;
 }
-.contentHolder {
-    flex: 3;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-start;
+
+/* we add media here to make contentHolder
+order differently at less than 1100px
+*/
+
+@media (max-width: 1100px) {
+    .contentHolder {
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
+@media (min-width: 1100px) {
+    .contentHolder {
+        flex: 3;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+    }
+}
+
+
 .spacer {
     flex: 1;
 }
