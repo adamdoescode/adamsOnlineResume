@@ -2,8 +2,8 @@
 body { margin: 0; padding: 0; }
 
 html body {
-    background-color: rgb(42, 42, 38);
-    color: aliceblue;
+    background-color: #132743;
+    color: #ffcbcb;
     height: 100%;
 }
 a {
@@ -31,11 +31,9 @@ h2 {
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-start;
-    /* min-height: 100%; */
 }
 .spacer {
     flex: 1;
-    /* min-width: 10em; */
 }
 .linkAboutMe, .skillEven, .skillOdd {
     border-radius: 5px
@@ -47,13 +45,8 @@ h2 {
     flex: 1;
     display: flex;
     flex-direction: column;
-    /* align-items: stretch; */
     min-width: 300px;
     max-width: 300px;
-    /* min-height: 100%;
-    max-height: 100%; */
-    /* border: solid red 2px; */
-    /* background-color: rgb(68, 50, 50); */
 }
 .aboutImage {
     display: flex;
@@ -73,7 +66,6 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-color: rgb(74, 74, 68); */
     padding 5px;
 }
 .contactInfo h3 {
@@ -82,8 +74,7 @@ h2 {
 .linkAboutMe {
     flex: 1;
     width: 90%;
-    border: solid rgb(112, 79, 79) 2px;
-    /* background-color: rgb(65, 52, 52); */
+    border: solid #ffb5b5 2px;
     padding: 2px;
 }
 .skillsContainer {
@@ -96,7 +87,7 @@ h2 {
     padding: 5px;
 }
 .skillEven, .skillOdd {
-    border: solid grey 2px;
+    border: solid #407088 2px;
     padding: 2px;
 }
 .skillOdd {
@@ -148,7 +139,7 @@ h2 {
 }
 .educationDiv {
     flex: 1;
-    border: solid rgb(35, 195, 142) 2px;
+    border: solid #407088 2px;
     margin: 1px;
     padding: 5px;
 }
@@ -159,7 +150,7 @@ h2 {
 }
 .experienceDiv {
     flex: 1;
-    border: solid rgb(207, 106, 190) 2px;
+    border: solid #78b3d1 2px;
     margin: 1px;
     padding: 5px;
 }
@@ -172,7 +163,7 @@ h2 {
 }
 .publicationDiv {
     flex: 1;
-    border: solid green 2px;
+    border: solid #407088 2px;
     margin: 1px;
     padding: 5px;
 }
