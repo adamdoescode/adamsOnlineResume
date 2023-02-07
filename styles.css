@@ -1,4 +1,5 @@
-
+/* remove annoying page marging/padding */
+body { margin: 0; padding: 0; }
 
 html body {
     background-color: rgb(42, 42, 38);
@@ -52,7 +53,7 @@ h2 {
     /* min-height: 100%;
     max-height: 100%; */
     /* border: solid red 2px; */
-    background-color: rgb(68, 50, 50);
+    /* background-color: rgb(68, 50, 50); */
 }
 .aboutImage {
     display: flex;
@@ -72,7 +73,7 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgb(74, 74, 68);
+    /* background-color: rgb(74, 74, 68); */
     padding 5px;
 }
 .contactInfo h3 {
@@ -82,7 +83,7 @@ h2 {
     flex: 1;
     width: 90%;
     border: solid rgb(112, 79, 79) 2px;
-    background-color: rgb(65, 52, 52);
+    /* background-color: rgb(65, 52, 52); */
     padding: 2px;
 }
 .skillsContainer {
@@ -91,7 +92,7 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgb(66, 62, 52);
+    /* background-color: rgb(66, 62, 52); */
     padding: 5px;
 }
 .skillEven, .skillOdd {
@@ -100,12 +101,12 @@ h2 {
 }
 .skillOdd {
     flex: 1;
-    background-color: rgb(80, 71, 61);
+    /* background-color: rgb(80, 71, 61); */
     width: 90%;
 }
 .skillEven {
     flex: 1;
-    background-color: rgb(81, 65, 46);
+    /* background-color: rgb(81, 65, 46); */
     width: 90%;
 }
 .metaContainer {
@@ -113,7 +114,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(53, 72, 65);
+    /* background-color: rgb(53, 72, 65); */
     /* min-width: 300px;
     max-width: 300px; */
 }
@@ -142,7 +143,7 @@ h2 {
 }
 .educationContainer {
     flex: 1;
-    background-color: rgb(66, 77, 73);
+    /* background-color: rgb(66, 77, 73); */
     padding: 5px;
 }
 .educationDiv {
@@ -153,7 +154,7 @@ h2 {
 }
 .experienceContainer {
     flex: 1;
-    background-color: rgb(67, 51, 64);
+    /* background-color: rgb(67, 51, 64); */
     padding: 5px;
 }
 .experienceDiv {
@@ -166,10 +167,10 @@ h2 {
     flex: 1;
     align-items: left;
     flex-direction: column;
-    background-color: rgb(57, 62, 61);
+    /* background-color: rgb(57, 62, 61); */
     padding: 5px;
 }
-.publication1, .publication2 {
+.publicationDiv {
     flex: 1;
     border: solid green 2px;
     margin: 1px;
