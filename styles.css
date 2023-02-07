@@ -27,8 +27,12 @@ h2 {
     flex: 1;
 }
 
-/* we add media here to make contentHolder
+/* 
+We add media here to make contentHolder
 order differently at less than 1100px
+
+For smaller screens we want the skills
+and info divs to be row-wise
 */
 
 @media (max-width: 1100px) {
@@ -36,7 +40,11 @@ order differently at less than 1100px
         flex: 3;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+    }
+    .sidebarInfo {
+        display: flex;
+        flex-direction: row;
     }
 }
 @media (min-width: 1100px) {
@@ -46,6 +54,14 @@ order differently at less than 1100px
         flex-direction: row-reverse;
         align-items: flex-start;
     }
+}
+
+.sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    max-width: 300px;
 }
 
 
@@ -58,13 +74,7 @@ order differently at less than 1100px
 .educationDiv, .experienceDiv, .publicationDiv {
     border-radius: 25px
 }
-.sidebar {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    min-width: 300px;
-    max-width: 300px;
-}
+
 .aboutImage {
     display: flex;
     flex-direction: column;
