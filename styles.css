@@ -64,6 +64,15 @@ and info divs to be row-wise
         border: solid #ffb5b5 2px;
         border-radius: 25px;
     }
+    .skillsContainer {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* background-color: rgb(66, 62, 52); */
+        padding: 5px;
+    }
 }
 
 @media (min-width: 800px) {
@@ -87,6 +96,15 @@ and info divs to be row-wise
         align-items: center;
         justify-content: center;
         padding 5px;
+    }
+    .skillsContainer {
+        flex: content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* background-color: rgb(66, 62, 52); */
+        padding: 5px;
     }
 }
 
@@ -116,15 +134,7 @@ and info divs to be row-wise
 .contactInfo h3 {
     text-align: center;
 }
-.skillsContainer {
-    flex: content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* background-color: rgb(66, 62, 52); */
-    padding: 5px;
-}
+
 .skillEven, .skillOdd {
     border: solid #407088 2px;
     padding: 2px;
