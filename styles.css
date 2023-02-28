@@ -23,8 +23,17 @@ h2 {
     flex: 1;
     flex-basis: 1000px;
 }
+/*
+    to centre text within preamble:
+    1. make preamble width 100%
+    2. make preamble children text-align: center
+*/
 .preamble {
     flex: 1;
+    width: 100%;
+}
+.preamble h1, .preamble p, .preamble div {
+    text-align: center;
 }
 
 /* 
