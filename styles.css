@@ -1,16 +1,47 @@
-/* remove annoying page marging/padding */
-body { margin: 0.1; padding: 0; }
+/* Resume styles.
+ * Colours come exclusively from theme.css tokens — do not hardcode hex here.
+ * theme.css is the homepage's shared palette: a vendored copy loads first as
+ * a fallback, then the live copy from adamdoescode.github.io overrides it.
+ * CI checks every var(--…) below is defined in theme.css.
+ *
+ * Pairing note: --colour-surface-alt flips from yellow to slate in dark mode,
+ * so text on it is always --colour-ink, never an *-ink or on-* colour.
+ */
+
+/* remove annoying page margin/padding */
+body {
+    margin: 0;
+    padding: 0 0.5rem;
+}
 
 html body {
-    background-color: #132743;
-    color: #ffcbcb;
+    background-color: var(--colour-bg);
+    color: var(--colour-ink);
     height: 100%;
 }
 a {
-    color: aquamarine;
+    color: var(--colour-primary-ink);
+    text-decoration: none;
+}
+a:hover,
+a:focus-visible {
+    text-decoration: underline;
+    text-decoration-thickness: 0.16em;
+    text-underline-offset: 0.18em;
 }
 h2 {
+    /* display: table centres the heading while keeping the underline only as
+     * wide as the text. */
+    display: table;
+    margin: 0.8em auto 0.6em;
     text-align: center;
+    border-bottom: var(--border-width) solid var(--colour-primary);
+}
+code {
+    background-color: var(--colour-surface-alt);
+    color: var(--colour-ink);
+    border: 1px solid var(--colour-border);
+    padding: 0.05em 0.25em;
 }
 .spacersAndMainContainer {
     display: flex;
@@ -35,8 +66,37 @@ h2 {
 .preamble h1, .preamble p, .preamble div {
     text-align: center;
 }
+.preamble h1 {
+    display: table;
+    margin: 0.5em auto 0.6em;
+    padding: 0.15em 0.4em;
+    background-color: var(--colour-primary);
+    color: var(--colour-on-primary);
+    border: var(--border-width) solid var(--colour-border);
+    box-shadow: var(--shadow-hard);
+}
 
-/* 
+.DecorativeElement {
+    width: 100%;
+    box-sizing: border-box;
+    height: 12px;
+    margin: 0.5em 0;
+    background-color: var(--colour-primary);
+    /* Thinner outline than the cards so the pink fill still reads. */
+    border: 2px solid var(--colour-border);
+}
+
+/* Shared neobrutalist card. The right/bottom margin leaves room for the
+ * hard shadow so it doesn't run into the next card. */
+.contactInfo, .educationDiv, .experienceDiv, .publicationDiv {
+    background-color: var(--colour-surface);
+    border: var(--border-width) solid var(--colour-border);
+    box-shadow: var(--shadow-hard);
+    margin: 0 var(--shadow-offset) 1em 0;
+    padding: 0.5em 0.9em;
+}
+
+/*
 We add media here to make contentHolder
 order differently at less than 800px
 
@@ -54,6 +114,7 @@ and info divs to be row-wise
     .sidebarInfo {
         display: flex;
         flex-direction: row;
+        gap: 0.5em;
         width: 100%;
     }
     /* on smaller screens want contact and skills to be wider */
@@ -67,11 +128,8 @@ and info divs to be row-wise
         flex: 1;
         display: flex;
         flex-direction: column;
-        align-items: left;
+        align-items: flex-start;
         justify-content: center;
-        padding: 5px;
-        border: solid #ffb5b5 2px;
-        border-radius: 25px;
     }
     .skillsContainer {
         flex: 2;
@@ -79,7 +137,6 @@ and info divs to be row-wise
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        /* background-color: rgb(66, 62, 52); */
         padding: 5px;
     }
 }
@@ -97,6 +154,7 @@ and info divs to be row-wise
         flex-direction: column;
         min-width: 300px;
         max-width: 300px;
+        margin-top: 1em;
     }
     .contactInfo {
         flex: 1;
@@ -104,7 +162,6 @@ and info divs to be row-wise
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding 5px;
     }
     .skillsContainer {
         flex: content;
@@ -112,7 +169,6 @@ and info divs to be row-wise
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        /* background-color: rgb(66, 62, 52); */
         padding: 5px;
     }
 }
@@ -120,12 +176,6 @@ and info divs to be row-wise
 
 .spacer {
     flex: 1;
-}
-.linkAboutMe, .skillEven, .skillOdd {
-    border-radius: 5px
-}
-.educationDiv, .experienceDiv, .publicationDiv {
-    border-radius: 25px
 }
 
 .aboutImage {
@@ -136,6 +186,8 @@ and info divs to be row-wise
 }
 .profilePic {
     height: 120px;
+    border: var(--border-width) solid var(--colour-border);
+    box-shadow: var(--shadow-hard);
 }
 .profilePicSource {
     text-align: center;
@@ -144,38 +196,33 @@ and info divs to be row-wise
     text-align: center;
 }
 
+/* Skill tiles alternate between the two surfaces. */
 .skillEven, .skillOdd {
-    border: solid #407088 2px;
-    padding: 2px;
-}
-.skillOdd {
     flex: 1;
-    /* background-color: rgb(80, 71, 61); */
     width: 90%;
+    color: var(--colour-ink);
+    border: 2px solid var(--colour-border);
+    box-shadow: var(--shadow-hard-small);
+    margin: 0.3em 0;
+    padding: 0.2em 0.4em;
 }
 .skillEven {
-    flex: 1;
-    /* background-color: rgb(81, 65, 46); */
-    width: 90%;
+    background-color: var(--colour-surface);
+}
+.skillOdd {
+    background-color: var(--colour-surface-alt);
 }
 .metaContainer {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-color: rgb(53, 72, 65); */
-    /* min-width: 300px;
-    max-width: 300px; */
 }
 .lastUpdate, .linkToWeb {
     flex: 1;
     width: 90%;
     padding: 2px;
 }
-/* .sidebarSpacer {
-    align-items: stetch;
-    background-color: blue;
-} */
 
 /* maintext */
 
@@ -188,43 +235,46 @@ and info divs to be row-wise
     flex: auto;
     flex-direction: column;
     min-width: 400px;
-    /* max-width: 900px; */
 }
-.educationContainer {
+.educationContainer, .experienceContainer, .publicationsContainer {
     flex: 1;
-    /* background-color: rgb(66, 77, 73); */
     padding: 5px;
 }
-.educationDiv {
+.educationDiv, .experienceDiv, .publicationDiv {
     flex: 1;
-    border: solid #407088 2px;
-    margin: 1px;
-    padding: 5px;
 }
-.experienceContainer {
-    flex: 1;
-    /* background-color: rgb(67, 51, 64); */
-    padding: 5px;
+.educationDiv h4, .experienceDiv h4, .publicationDiv h4 {
+    margin: 0.4em 0;
 }
-.experienceDiv {
-    flex: 1;
-    border: solid #78b3d1 2px;
-    margin: 1px;
-    padding: 5px;
-}
-.publicationsContainer {
-    flex: 1;
-    align-items: left;
-    flex-direction: column;
-    /* background-color: rgb(57, 62, 61); */
-    padding: 5px;
-}
-.publicationDiv {
-    flex: 1;
-    border: solid #407088 2px;
-    margin: 1px;
-    padding: 5px;
+.jobTasks {
+    border-left: var(--border-width) solid var(--colour-accent);
+    padding-left: 0.2em;
 }
 footer {
     text-align: center;
+    color: var(--colour-muted);
+    border-top: var(--border-width) solid var(--colour-border);
+    margin-top: 1em;
+}
+
+/* Print light regardless of the OS colour scheme, without shadows. System
+ * colours stand in for the light tokens so no hex is hardcoded here. */
+@media print {
+    :root {
+        color-scheme: light;
+        --colour-bg: Canvas;
+        --colour-surface: Canvas;
+        --colour-surface-alt: Canvas;
+        --colour-ink: CanvasText;
+        --colour-muted: CanvasText;
+        --colour-primary-ink: CanvasText;
+        --colour-border: CanvasText;
+        --colour-shadow: CanvasText;
+    }
+    * {
+        box-shadow: none !important;
+    }
+    .contactInfo, .educationDiv, .experienceDiv, .publicationDiv {
+        break-inside: avoid;
+    }
 }

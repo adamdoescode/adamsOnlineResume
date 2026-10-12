@@ -13,6 +13,17 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: Check styles.css only uses tokens defined in theme.css
+      shell: bash
+      run: |
+        missing=$(comm -23 \
+          <(grep -o 'var(--[a-zA-Z0-9_-]\+' styles.css | cut -c5- | sort -u) \
+          <(grep -o -- '--[a-zA-Z0-9_-]\+:' theme.css | tr -d : | sort -u))
+        if [ -n "$missing" ]; then
+          echo "Tokens used in styles.css but not defined in theme.css:"
+          echo "$missing"
+          exit 1
+        fi
     - name: Build the site in the jekyll/builder container
       run: |
         docker run \
